@@ -25,10 +25,11 @@ vector<State> ParseLine(string line) {
       // TODO: Modify the line below to push_back
       // a State::kEmpty if n is 0, and push_back
       // a State::kObstacle otherwise.
-     switch(n) {
-       case 0: row.push_back(State::kEmpty);
-       case 1: row.push_back(State::kObstacle);
-        }
+      if (n == 0) {
+        row.push_back(State::kEmpty);
+      } else {
+        row.push_back(State::kObstacle);
+      }
       
     }
     return row;
@@ -80,8 +81,9 @@ int main() {
 }
 
 ./a.out 
-0   ⛰️   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   
-0   ⛰️   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   
-0   ⛰️   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   
-0   ⛰️   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   
-0   ⛰️   0   ⛰️   0   ⛰️   0   ⛰️   ⛰️   0   ⛰️   
+0   ⛰️   0   0   0   0   
+0   ⛰️   0   0   0   0   
+0   ⛰️   0   0   0   0   
+0   ⛰️   0   0   0   0   
+0   0   0   0   ⛰️   0   
+    
