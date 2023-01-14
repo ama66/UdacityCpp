@@ -50,7 +50,7 @@ void PrintBoard(const vector<vector<int>> board) {
 int main() {
    vector <vector<int>> board ; 
   // TODO: Store the output of ReadBoardFile in the "board" variable.
-  board = ReadBoardFile("1.board");
+  board = ReadBoardFile("1.board");  // could also use "auto board" to automatically define type based on retrun type
   // TODO: Uncomment PrintBoard below to print "board".
   PrintBoard(board);
 }
